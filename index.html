@@ -9,48 +9,52 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
 
     <title>Library</title>
   </head>
   <body>
     <div class="jumbotron">
-        <h1 class="display-4 text-center font-weight-bold">LIBRARY</h1>
-        <p class="lead text-center mt-3">
+        <h1 class="display-1 text-center font-weight-bold ">LIBRARY</h1>
+        <p class="lead text-center mt-3 pt-3">
           <a class="btn btn-primary btn-lg font-weight-bold " href="#" role="button">New Book</a>
+          <div class="books-grid js-books-grid"></div>
         </p>
-        <div class="popup js-popup">
-            <form class="popup__form js-popup-form">
-              <h3 class="popup__title">Add new book</h3>
+        <div class="book_form js-popup">
+            <form class="form_book js-popup-form">
+              <h3 class="form__title font-weight-bold">Add New Book</h3>
               <input
-                class="popup__input"
+                class="form_input"
                 type="text"
                 id="author"
                 placeholder="Author"
                 required
               />
               <input
-                class="popup__input"
+                class="form_input"
                 type="text"
                 id="title"
                 placeholder="Title"
                 required
               />
               <input
-                class="popup__input"
+                class="form_input"
                 type="number"
                 id="pages"
                 placeholder="Number of Pages"
                 required
               />
-              <div class="popup__is-read">
-                <label for="is-read">Read?</label>
+              <div class="form_read">
+                <label class="read font-weight-bold" >Read?</label>
                 <input class="popup__checkbox" type="checkbox" id="is-read" />
               </div>
-              <button class="button button--green button--medium" type="submit">
+              <button class="btn btn-primary btn-lg" type="submit">
                 Submit
               </button>
             </form>
           </div>
+          <div class="overlay js-overlay"></div>
     </div>
 
     <!-- Optional JavaScript -->

@@ -16,8 +16,41 @@
     <div class="jumbotron">
         <h1 class="display-4 text-center font-weight-bold">LIBRARY</h1>
         <p class="lead text-center mt-3">
-          <a class="btn btn-primary btn-lg font-weight-bold " href="#" role="button">Add New Book</a>
+          <a class="btn btn-primary btn-lg font-weight-bold " href="#" role="button">New Book</a>
         </p>
+        <div class="popup js-popup">
+            <form class="popup__form js-popup-form">
+              <h3 class="popup__title">Add new book</h3>
+              <input
+                class="popup__input"
+                type="text"
+                id="author"
+                placeholder="Author"
+                required
+              />
+              <input
+                class="popup__input"
+                type="text"
+                id="title"
+                placeholder="Title"
+                required
+              />
+              <input
+                class="popup__input"
+                type="number"
+                id="pages"
+                placeholder="Number of Pages"
+                required
+              />
+              <div class="popup__is-read">
+                <label for="is-read">Read?</label>
+                <input class="popup__checkbox" type="checkbox" id="is-read" />
+              </div>
+              <button class="button button--green button--medium" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
     </div>
 
     <!-- Optional JavaScript -->

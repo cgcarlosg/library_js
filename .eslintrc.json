@@ -1,3 +1,5 @@
+
+
 {
     "env": {
       "browser": true,
@@ -20,4 +22,5 @@
       "dist/",
       "build/"
     ]
+    
   }

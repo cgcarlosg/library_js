@@ -20,7 +20,7 @@ input {
     padding: 2rem;
   }
 
-  /* .book_form {
+  .book_form {
     position: fixed;
     z-index: 1;
     top: 50%;
@@ -35,9 +35,9 @@ input {
     transition: 200ms ease-in-out;
   } */
 
-  /* .book_form--active {
+   .book_form--active {
       transform: translate(-50%, -50%) scale(1);
-  } */
+  }
 
   .form_book {
       display: flex;

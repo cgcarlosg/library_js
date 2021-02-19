@@ -139,7 +139,7 @@ input {
 .button--red:hover {
   background-color: var(--button--red-hover);
 }
-  
+
 .button--red:active {
   background-color: var(--button--red-active);
 }

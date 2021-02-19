@@ -22,9 +22,9 @@
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -51,7 +51,6 @@ button {
   font-size: inherit;
   cursor: pointer;
 }
-
 
 input {
   color: inherit;
@@ -82,169 +81,152 @@ input {
 }
 
 .books-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem;
   }
 
-  .books-grid__book-card {
-    padding-top: 2rem;
-    border: 2px solid var(--border);
-    border-radius: 5px;
-    background-color: var(--book-card);
-    text-align: center;
+.books-grid__book-card {
+  padding-top: 2rem;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  background-color: var(--book-card);
+  text-align: center;
   }
 
-  .books-grid__book-text {
-    padding: 0.5rem;
+.books-grid__book-text {
+  padding: 0.5rem;
   }
 
-  .button {
-    padding: 1rem;
-    border: 2px solid var(--border);
-    border-radius: 5px;
-    margin: 2rem;
-    font-weight: bold;
+.button {
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin: 2rem;
+  font-weight: bold;
   }
 
-  .button:focus {
-    outline: none;
+.button:focus {
+  outline: none;
   }
   
-  .button--medium {
-    font-size: 4rem;
+.button--medium {
+  font-size: 4rem;
   }
   
-  .button--large {
-    padding: 1.5rem;
-    font-size: 5rem;
+.button--large {
+  padding: 1.5rem;
+  font-size: 5rem;
   }
 
-  .button--green {
-    background-color: var(--button--green);
+.button--green {
+  background-color: var(--button--green);
   }
   
-  .button--green:hover {
-    background-color: var(--button--green-hover);
+.button--green:hover {
+  background-color: var(--button--green-hover);
   }
   
-  .button--green:active {
-    background-color: var(--button--green-active);
+.button--green:active {
+  background-color: var(--button--green-active);
   }
 
-  .button--red {
-    background-color: var(--button--red);
+.button--red {
+  background-color: var(--button--red);
   }
   
-  .button--red:hover {
-    background-color: var(--button--red-hover);
+.button--red:hover {
+  background-color: var(--button--red-hover);
   }
   
-  .button--red:active {
-    background-color: var(--button--red-active);
+.button--red:active {
+  background-color: var(--button--red-active);
   }
 
-  .button--light-green {
-    background-color: var(--button--light-green);
-  }
-  
-  .button--light-green:hover {
-    background-color: var(--button--light-green-hover);
+.button--light-green {
+  background-color: var(--button--light-green);
   }
   
-  .button--light-green:active {
-    background-color: var(--button--light-green-active);
+.button--light-green:hover {
+  background-color: var(--button--light-green-hover);
+  }
+  
+.button--light-green:active {
+  background-color: var(--button--light-green-active);
   }
 
 
 
-  .popup {
-    position: fixed;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    min-width: 300px;
-    padding: 3rem;
-    border: 2px solid var(--popup-border);
-    border-radius: 10px;
-    background-color: violet;
-    text-align: center;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 200ms ease-in-out;
+.popup {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  min-width: 300px;
+  padding: 3rem;
+  border: 2px solid var(--popup-border);
+  border-radius: 10px;
+  background-color: violet;
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
   } 
 
-   .popup--active {
-      transform: translate(-50%, -50%) scale(1);
+.popup--active {
+  transform: translate(-50%, -50%) scale(1);
   }
 
-  .popup_form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+.popup_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
 
-  .popup_title {
-      margin: 2rem;
-      font-size: 4rem;
+.popup_title {
+  margin: 2rem;
+  font-size: 4rem;
   }
 
-  .popup_input {
-      width: 80%;
-      padding: 1rem;
-      border: 2px solid var(--border);
-      border-radius: 5px;
-      margin: 2rem;
-      font-weight: bold;
-   }
-
-   .popup_input:focus {
-       outline: blueviolet;
-   }
-
-   .popup__is-read {
-    display: flex;
-    justify-content: space-between;
-    width: 47%;
-    padding: 1rem;
-    margin: 2rem;
-  }
-
-  .popup__checkbox {
-    width: 2rem;
-    height: 2rem;
-    margin-top: 1.6rem;
-  }
-
-   .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1;
-  }
-
-  .overlay--active {
-    display: block;
-  }
-
-  @media (max-width: 1200px) {
-    .books-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+.popup_input {
+  width: 80%;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin: 2rem;
+  font-weight: bold;
   }
   
-  @media (max-width: 800px) {
-    html {
-      font-size: 57.5%;
-    }
-  
-    .books-grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
+
+.popup_input:focus {
+  outline: blueviolet;
   }
 
- 
+.popup__is-read {
+  display: flex;
+  justify-content: space-between;
+  width: 47%;
+  padding: 1rem;
+  margin: 2rem;
+  }
+
+.popup__checkbox {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 1.6rem;
+  }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  }
+
+.overlay--active {
+  display: block;
+  }

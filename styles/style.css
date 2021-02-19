@@ -59,6 +59,21 @@ input {
   font-size: inherit;
 }
 
+.header {
+  padding: 2rem;
+  border-bottom: 2px solid var(--border);
+  background-color: var(--header);
+}
+
+.header__title {
+  margin-top: 1rem;
+  color: var(--title-font);
+  font-family: "Bebas Neue", cursive;
+  font-size: 10rem;
+  letter-spacing: 1rem;
+  text-align: center;
+}
+
 .main {
   max-width: 1600px;
   padding: 2rem;
@@ -177,7 +192,7 @@ input {
   .popup_input {
       width: 80%;
       padding: 1rem;
-      border: 2px solid black;
+      border: 2px solid var(--border);
       border-radius: 5px;
       margin: 2rem;
       font-weight: bold;
@@ -214,6 +229,22 @@ input {
 
   .overlay--active {
     display: block;
+  }
+
+  @media (max-width: 1200px) {
+    .books-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    html {
+      font-size: 57.5%;
+    }
+  
+    .books-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
  

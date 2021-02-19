@@ -1,67 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-  </head>
-  <body>
-    <div class="jumbotron">
-        <h1 class="display-1 text-center font-weight-bold " id="demo">LIBRARY</h1>
-        <p class="lead text-center mt-3 pt-3 main">
-          <button class="button button--green button--large js-new-book-button">
-            New book
-          </button>
-          <div class="books-grid js-books-grid"></div>
-        </p>
-        <div class="popup js-popup">
-            <form class="popup_form js-popup-form">
-              <h3 class="form__title font-weight-bold">Add New Book</h3>
-              <input
-                class="popup_input"
-                type="text"
-                id="author"
-                placeholder="Author"
-                required
-              />
-              <input
-                class="popup_input"
-                type="text"
-                id="title"
-                placeholder="Title"
-                required
-              />
-              <input
-                class="popup_input"
-                type="number"
-                id="pages"
-                placeholder="Number of Pages"
-                required
-              />
-              <div class="popup_is-read">
-                <label for="is-read" >Read?</label>
-                <input class="popup__checkbox" type="checkbox" id="is-read" />
-              </div>
-              <button class="button button--green button-large" type="submit">
-                Submit
-              </button>
-            </form>
-          </div>
-          <div class="overlay js-overlay"></div>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    
+   </head>
+  <body >
+    <header class="header">
+      <h1 class="header__title">LIBRARY</h1>
+    </header>
+    <main class="main">
+     
+      <button class="button button--green button--large js-new-book-button">
+        New book
+      </button>
+      <div class="books-grid js-books-grid"></div>
+    </main>
+    <div class="popup js-popup">
+      <form class="popup__form js-popup-form">
+        <h3 class="popup__title">Add new book</h3>
+        <input
+          class="popup__input"
+          type="text"
+          id="title"
+          placeholder="Title"
+          required
+        />
+        <input
+          class="popup__input"
+          type="text"
+          id="author"
+          placeholder="Author"
+          required
+        />
+        <input
+          class="popup__input"
+          type="number"
+          id="pages"
+          placeholder="Pages"
+          required
+        />
+        <div class="popup__is-read">
+          <label for="is-read">Read?</label>
+          <input class="popup__checkbox" type="checkbox" id="is-read" />
+        </div>
+        <button class="button button--green button--medium" type="submit">
+          Submit
+        </button>
+      </form>
     </div>
-
-    <!-- Optional JavaScript -->
-    
-    
+    <div class="overlay js-overlay"></div>
+    <script src="index.js" defer></script>
     
   </body>
 </html>

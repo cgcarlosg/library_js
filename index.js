@@ -162,4 +162,4 @@ function restoreLocal() {
   updateBooksGrid();
 }
 
-restoreLocal() 
+restoreLocal();

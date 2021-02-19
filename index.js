@@ -12,11 +12,11 @@ class Book {
   }
 }
 
+let myLibrary = [];
+
 function saveLocal() {
   localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 }
-
-let myLibrary = [];
 
 function addToLibrary(newBook) {
   if (myLibrary.some((book) => book.title === newBook.title)) return false;
@@ -70,6 +70,8 @@ function getBookFromInput() {
   return new Book(title, author, pages, isRead);
 }
 
+const booksGrid = document.querySelector('.js-books-grid');
+
 function resetGrid() {
   booksGrid.innerHTML = '';
 }
@@ -102,7 +104,7 @@ function createBookCard(book) {
     readButton.classList.add('button--light-green');
   } else {
     readButton.textContent = 'Not read';
-  readButton.classList.add('button--light-red');
+    readButton.classList.add('button--light-red');
   }
 
   bookCard.appendChild(title);
@@ -153,7 +155,6 @@ function checkBooksGridInput(e) {
 }
 
 form.addEventListener('submit', addBook);
-const booksGrid = document.querySelector('.js-books-grid');
 booksGrid.addEventListener('click', checkBooksGridInput);
 
 function restoreLocal() {

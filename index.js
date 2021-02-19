@@ -1,4 +1,4 @@
-"use strict";
+// eslint-disable-next-line no-use-before-define
 
 class Book {
   constructor(
@@ -155,7 +155,7 @@ function createBookCard(book) {
 }
 
 function saveLocal() {
-  localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+  localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 }
 
 function restoreLocal() {

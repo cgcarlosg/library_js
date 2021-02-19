@@ -156,10 +156,6 @@ form.addEventListener('submit', addBook);
 const booksGrid = document.querySelector('.js-books-grid');
 booksGrid.addEventListener('click', checkBooksGridInput);
 
-function resetGrid() {
-  booksGrid.innerHTML = '';
-}
-
 function restoreLocal() {
   myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
   if (myLibrary === null) myLibrary = [];

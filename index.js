@@ -1,7 +1,4 @@
-/*eslint no-use-before-define: "error"*/
-/*eslint-env es6*/
-
-// BOOK CLASS
+"use strict";
 
 class Book {
   constructor(
@@ -14,10 +11,8 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.isRead = isRead;
+  }
 }
-}
-
-// BOOKS ARRAY
 
 let myLibrary = [];
 
@@ -42,13 +37,11 @@ function getBook(bookTitle) {
   return null;
 }
 
-// POPUP
-
 const newBookButton = document.querySelector('.js-new-book-button');
 const popup = document.querySelector('.js-popup');
 const overlay = document.querySelector('.js-overlay');
 
-newBookButton.addEventListener("click", openPopup);
+newBookButton.addEventListener('click', openPopup);
 overlay.addEventListener('click', closePopup);
 
 window.addEventListener('keydown', (e) => {
@@ -66,9 +59,7 @@ function closePopup() {
   overlay.classList.remove('overlay--active');
 }
 
-// FORM
-
-  const form = document.querySelector('.js-popup-form');
+const form = document.querySelector('.js-popup-form');
 form.addEventListener('submit', addBook);
 
 function addBook(e) {
@@ -88,9 +79,6 @@ function getBookFromInput() {
   const isRead = document.querySelector('#is-read').checked;
   return new Book(title, author, pages, isRead);
 }
-
-
-// BOOKS GRID
 
 const booksGrid = document.querySelector('.js-books-grid');
 booksGrid.addEventListener('click', checkBooksGridInput);
@@ -165,8 +153,6 @@ function createBookCard(book) {
   bookCard.appendChild(removeButton);
   booksGrid.appendChild(bookCard);
 }
-
-// LOCAL STORAGE
 
 function saveLocal() {
   localStorage.setItem("myLibrary", JSON.stringify(myLibrary));

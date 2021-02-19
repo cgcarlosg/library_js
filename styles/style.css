@@ -1,16 +1,69 @@
+:root {
+  --body: #3f37c9;
+  --font: #393b44;
+  --border: #666;
+  --header: #d6e0f0;
+  --title-font: #282a33;
+  --book-card: #e0e2e7;
+  --button--green: #abf79c;
+  --button--green-hover: #9ae68b;
+  --button--green-active: #89d57a;
+  --button--red: #da9797;
+  --button--red-hover: #c98686;
+  --button--red-active: #b87575;
+  --button--light-green: #d3ffcd;
+  --button--light-green-hover: #c2eebc;
+  --button--light-green-active: #b1ddab;
+  --button--light-red: #ffe8e8;
+  --button--light-red-hover: #eed7d7;
+  --button--light-red-active: #ddc6c6;
+  --popup: #d6e0f0;
+  --popup-border: #282a33;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body {
-    background-color: burlywood;
-    font-family: Arial, Helvetica, sans-serif;
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
 }
 
+body {
+  background-color: var(--body);
+  color: var(--font);
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+
 input {
-    color: black;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.main {
+  max-width: 1600px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .books-grid {
@@ -20,37 +73,108 @@ input {
     padding: 2rem;
   }
 
-  .book_form {
+  .books-grid__book-card {
+    padding-top: 2rem;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--book-card);
+    text-align: center;
+  }
+
+  .books-grid__book-text {
+    padding: 0.5rem;
+  }
+
+  .button {
+    padding: 1rem;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    margin: 2rem;
+    font-weight: bold;
+  }
+
+  .button:focus {
+    outline: none;
+  }
+  
+  .button--medium {
+    font-size: 4rem;
+  }
+  
+  .button--large {
+    padding: 1.5rem;
+    font-size: 5rem;
+  }
+
+  .button--green {
+    background-color: var(--button--green);
+  }
+  
+  .button--green:hover {
+    background-color: var(--button--green-hover);
+  }
+  
+  .button--green:active {
+    background-color: var(--button--green-active);
+  }
+
+  .button--red {
+    background-color: var(--button--red);
+  }
+  
+  .button--red:hover {
+    background-color: var(--button--red-hover);
+  }
+  
+  .button--red:active {
+    background-color: var(--button--red-active);
+  }
+
+  .button--light-green {
+    background-color: var(--button--light-green);
+  }
+  
+  .button--light-green:hover {
+    background-color: var(--button--light-green-hover);
+  }
+  
+  .button--light-green:active {
+    background-color: var(--button--light-green-active);
+  }
+
+
+
+  .popup {
     position: fixed;
     z-index: 1;
     top: 50%;
     left: 50%;
     min-width: 300px;
     padding: 3rem;
-    border: 2px solid black;
+    border: 2px solid var(--popup-border);
     border-radius: 10px;
     background-color: violet;
     text-align: center;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-  } */
+  } 
 
-   .book_form--active {
+   .popup--active {
       transform: translate(-50%, -50%) scale(1);
   }
 
-  .form_book {
+  .popup_form {
       display: flex;
       flex-direction: column;
       align-items: center;
   }
 
-  .form_title {
+  .popup_title {
       margin: 2rem;
       font-size: 4rem;
   }
 
-  .form_input {
+  .popup_input {
       width: 80%;
       padding: 1rem;
       border: 2px solid black;
@@ -59,9 +183,23 @@ input {
       font-weight: bold;
    }
 
-   .form_input:focus {
+   .popup_input:focus {
        outline: blueviolet;
    }
+
+   .popup__is-read {
+    display: flex;
+    justify-content: space-between;
+    width: 47%;
+    padding: 1rem;
+    margin: 2rem;
+  }
+
+  .popup__checkbox {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1.6rem;
+  }
 
    .overlay {
     position: fixed;
@@ -78,8 +216,4 @@ input {
     display: block;
   }
 
-  .popup__checkbox {
-    width: 2rem;
-    height: 2rem;
-    margin-top: 1.6rem;
-  }
+ 

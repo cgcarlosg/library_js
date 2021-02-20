@@ -1,22 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    
+   </head>
+  <body >
+    <header class="header">
+      <h1 class="header__title center">LIBRARY</h1>
+    </header>
+    <main class="main center">
+     
+      <button class="button button--green button--large js-new-book-button inherit">
+        New book
+      </button>
+      <div class="books-grid js-books-grid"></div>
+    </main>
+    <div class="popup js-popup fixed center">
+      <form class="popup__form js-popup-form center">
+        <h3 class="popup__title">Add new book</h3>
+        <input
+          class="popup__input inherit"
+          type="text"
+          id="title"
+          placeholder="Title"
+          required
+        />
+        <input
+          class="popup__input inherit"
+          type="text"
+          id="author"
+          placeholder="Author"
+          required
+        />
+        <input
+          class="popup__input inherit"
+          type="number"
+          id="pages"
+          placeholder="Pages"
+          required
+        />
+        <div class="popup__is-read flex">
+          <label for="is-read">Read?</label>
+          <input class="popup__checkbox" type="checkbox" id="is-read" />
+        </div>
+        <button class="button button--green button--medium" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="overlay fixed js-overlay"></div>
+    <script src="index.js" defer></script>
+    
   </body>
 </html>

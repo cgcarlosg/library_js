@@ -1,0 +1,229 @@
+:root {
+  --body: #3f37c9;
+  --font: #393b44;
+  --border: #666;
+  --header: #d6e0f0;
+  --title-font: #282a33;
+  --book-card: #e0c2c7;
+  --button--green: #abf79c;
+  --button--green-hover: #9ae68b;
+  --button--green-active: #89d57a;
+  --button--red: #da9797;
+  --button--red-hover: #c98686;
+  --button--red-active: #b87575;
+  --button--light-green: #d3ffcd;
+  --button--light-green-hover: #c2eebc;
+  --button--light-green-active: #b1ddab;
+  --button--light-red: #ffe8e8;
+  --button--light-red-hover: #eed7d7;
+  --button--light-red-active: #ddc6c6;
+  --popup: #d6e0f0;
+  --popup-border: #282a33;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  background-color: var(--body);
+  color: var(--font);
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.inherit {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.center {
+  text-align: center;
+}
+
+.header {
+  padding: 2rem;
+  border-bottom: 2px solid var(--border);
+  background-color: var(--header);
+}
+
+.header__title {
+  margin-top: 1rem;
+  color: var(--title-font);
+  font-family: "Bebas Neue", cursive;
+  font-size: 10rem;
+  letter-spacing: 1rem;
+}
+
+.main {
+  max-width: 1600px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+
+.books-grid__book-card {
+  padding-top: 2rem;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  background-color: var(--book-card);
+}
+
+.books-grid__book-text {
+  padding: 0.5rem;
+}
+
+.button {
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin: 2rem;
+  font-weight: bold;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button--medium {
+  font-size: 4rem;
+}
+
+.button--large {
+  padding: 1.5rem;
+  font-size: 5rem;
+}
+
+.button--green {
+  background-color: var(--button--green);
+}
+
+.button--green:hover {
+  background-color: var(--button--green-hover);
+}
+
+.button--green:active {
+  background-color: var(--button--green-active);
+}
+
+.button--red {
+  background-color: var(--button--red);
+}
+
+.button--red:hover {
+  background-color: var(--button--red-hover);
+}
+
+.button--red:active {
+  background-color: var(--button--red-active);
+}
+
+.button--light-green {
+  background-color: var(--button--light-green);
+}
+
+.button--light-green:hover {
+  background-color: var(--button--light-green-hover);
+}
+
+.button--light-green:active {
+  background-color: var(--button--light-green-active);
+}
+
+.popup {
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  min-width: 300px;
+  padding: 3rem;
+  border: 2px solid var(--popup-border);
+  border-radius: 10px;
+  background-color: violet;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+}
+
+.popup--active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup_form {
+  flex-direction: column;
+}
+
+.popup_title {
+  margin: 2rem;
+  font-size: 4rem;
+}
+
+.popup_input {
+  width: 80%;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin: 2rem;
+  font-weight: bold;
+}
+
+.popup_input:focus {
+  outline: blueviolet;
+}
+
+.popup__is-read {
+  justify-content: space-between;
+  width: 47%;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+.popup__checkbox {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 1.6rem;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+.overlay--active {
+  display: block;
+}

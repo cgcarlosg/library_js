@@ -4,7 +4,7 @@
   --border: #666;
   --header: #d6e0f0;
   --title-font: #282a33;
-  --book-card: #e0e2e7;
+  --book-card: #e0c2c7;
   --button--green: #abf79c;
   --button--green-hover: #9ae68b;
   --button--green-active: #89d57a;
@@ -45,17 +45,26 @@ h3 {
   line-height: 1.2;
 }
 
-button {
+.inherit {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
+}
+
+button {
   cursor: pointer;
 }
 
-input {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
+.flex {
+  display: flex;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.center {
+  text-align: center;
 }
 
 .header {
@@ -70,14 +79,12 @@ input {
   font-family: "Bebas Neue", cursive;
   font-size: 10rem;
   letter-spacing: 1rem;
-  text-align: center;
 }
 
 .main {
   max-width: 1600px;
   padding: 2rem;
   margin: 0 auto;
-  text-align: center;
 }
 
 .books-grid {
@@ -92,7 +99,6 @@ input {
   border: 2px solid var(--border);
   border-radius: 5px;
   background-color: var(--book-card);
-  text-align: center;
 }
 
 .books-grid__book-text {
@@ -157,7 +163,6 @@ input {
 }
 
 .popup {
-  position: fixed;
   z-index: 1;
   top: 50%;
   left: 50%;
@@ -166,7 +171,6 @@ input {
   border: 2px solid var(--popup-border);
   border-radius: 10px;
   background-color: violet;
-  text-align: center;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
 }
@@ -176,9 +180,7 @@ input {
 }
 
 .popup_form {
-  display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .popup_title {
@@ -200,7 +202,6 @@ input {
 }
 
 .popup__is-read {
-  display: flex;
   justify-content: space-between;
   width: 47%;
   padding: 1rem;
@@ -214,7 +215,6 @@ input {
 }
 
 .overlay {
-  position: fixed;
   top: 0;
   left: 0;
   display: none;

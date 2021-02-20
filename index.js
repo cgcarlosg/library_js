@@ -124,9 +124,7 @@ function addBook(e) {
   if (addToLibrary(getBookFromInput())) {
     updateBooksGrid();
     closePopup();
-  } else {
-    alert('This book already exists in your library');
-  }
+  } 
 }
 
 function checkBooksGridInput(e) {

@@ -124,7 +124,7 @@ function addBook(e) {
   if (addToLibrary(getBookFromInput())) {
     updateBooksGrid();
     closePopup();
-  } 
+  }
 }
 
 function checkBooksGridInput(e) {

@@ -33,6 +33,9 @@ To get a local copy up and running follow these simple example steps.
 - Change directory to folder to download repository
 - Use `cd <file-path>`
 - Run `git clone https://github.com/sumon0002001/library_js.git`
+- open the folder
+- double click index.html
+- Here comes the website on the local machine.
 
 
 

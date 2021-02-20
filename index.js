@@ -58,10 +58,6 @@ function closePopup() {
 newBookButton.addEventListener('click', openPopup);
 overlay.addEventListener('click', closePopup);
 
-window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closePopup();
-});
-
 function getBookFromInput() {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
